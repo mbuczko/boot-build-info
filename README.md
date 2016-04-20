@@ -1,7 +1,7 @@
 # boot-build-info
 Simple build info generator basing on git and user's defined build data.
 
-This task is merely inspired by [thread on HackerNews] (http://hn.premii.com/#/comments/11528177) and bases on [build_info.clj gist]
+This task is merely inspired by [thread on HackerNews] (http://hn.premii.com/#/comments/11528177) and bases on [build_info.clj gist](https://gist.github.com/emidln/8f5993a37ff300e36897debe9c5bf558)
 shared by one of commentators.
 
     $ boot -h
@@ -14,10 +14,10 @@ shared by one of commentators.
 
 
 
-```Destination``` should be relative to project root directory and should contain file name as well, eg: ```resources/data/build_info.json```.
+```dest``` should be relative to project root directory and should contain file name as well, eg: ```data/build.json```.
 By default it's set to ```resources/build.json```.
 
-```Build``` is a key-string value map with additional info that should be attached to build info (like environment, tags, etc.)
+```build``` is a key-string value map with additional info that should be attached to build info (like environment, tags, etc.)
 
 ## Why?
 
@@ -40,6 +40,8 @@ With no additional configuration following information is attached to build.json
         build-info {:build {:env "prod" :version +version+}})
 
 this results in something like this in your ```resource/build.json```:
+
+    # boot build-info
 
     {"sha":"07bae1e","branch":"master","timestamp":"2016-04-20T10:04:24.586Z","env":"prod","version":"0.1.0"}
 
