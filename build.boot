@@ -12,7 +12,8 @@
 (bootlaces! +version+)
 
 (task-options!
- pom {:version +version+
+ pom {:project 'mbuczko/boot-build-info
+      :version +version+
       :description "Generates build info based of all the intersting stuff returned by git"
       :url "https://github.com/mbuczko/boot-build-info"
       :scm {:url "https://github.com/mbuczko/boot-build-info"}
