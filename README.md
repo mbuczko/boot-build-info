@@ -1,4 +1,7 @@
 # boot-build-info
+
+[![Clojars Project](https://img.shields.io/clojars/v/mbuczko/boot-build-info.svg)](https://clojars.org/mbuczko/boot-build-info)
+
 Simple build info generator basing on git and user's defined build data.
 
 This task is merely inspired by [thread on HackerNews] (http://hn.premii.com/#/comments/11528177) and bases on [build_info.clj gist](https://gist.github.com/emidln/8f5993a37ff300e36897debe9c5bf558)
