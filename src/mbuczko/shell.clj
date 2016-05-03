@@ -39,6 +39,7 @@
 (defn build-info [kv]
   (merge
    {:sha (git rev-parse --short HEAD)
+    :tag (git describe --abbrev=0 --tags HEAD)
     :branch (git rev-parse --abbrev-ref HEAD)
     :timestamp (now-iso-str)} kv))
 

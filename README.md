@@ -32,6 +32,7 @@ exposed eg. by REST endpoint may save your life in case of emergency.
 With no additional configuration following information is attached to build.json:
 
     {:sha (git rev-parse --short HEAD)
+     :tag (git describe --abbrev=0 --tags HEAD)
      :branch (git rev-parse --abbrev-ref HEAD)
      :timestamp (now-iso-str)}
 
@@ -42,11 +43,11 @@ With no additional configuration following information is attached to build.json
     (task-options!
         build-info {:build {:env "prod" :version +version+}})
 
-this results in something like this in your ```resource/build.json```:
+this results in something like this in your ```resources/build.json```:
 
     # boot build-info
 
-    {"sha":"07bae1e","branch":"master","timestamp":"2016-04-20T10:04:24.586Z","env":"prod","version":"0.1.0"}
+    {"sha":"07bae1e", "tag":"RC1", "branch":"master", "timestamp":"2016-04-20T10:04:24.586Z", "env":"prod", "version":"0.1.0"}
 
 ## LICENSE
 
